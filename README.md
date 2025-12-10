@@ -25,3 +25,14 @@ This project demonstrates my database design, SQL query writing, and PHP integra
 It is suitable for showcasing in portfolios, GitHub, or during interviews for Data Science or Web Development role
 ![SRMS Dashboard](https://github.com/AyushiBambhroliya/SRMS-PHP-MySQL-Demo/blob/54935d8473867d8b3a5e7d74b7e824d5cd1848b4/sm/s1.png)
 
+![SRMS Screenshot 1](https://raw.githubusercontent.com/AyushiBambhroliya/SRMS-PHP-MySQL-Demo/102210a3b28b6de2aba5e4e84927c341e3176239/s2.png)
+
+![SRMS Screenshot 2](https://raw.githubusercontent.com/AyushiBambhroliya/SRMS-PHP-MySQL-Demo/102210a3b28b6de2aba5e4e84927c341e3176239/s3.png)
+
+![SRMS Screenshot 4](https://raw.githubusercontent.com/AyushiBambhroliya/SRMS-PHP-MySQL-Demo/102210a3b28b6de2aba5e4e84927c341e3176239/s4.png)
+
+![SRMS Screenshot 5](https://raw.githubusercontent.com/AyushiBambhroliya/SRMS-PHP-MySQL-Demo/102210a3b28b6de2aba5e4e84927c341e3176239/s5.png)
+
+![SRMS Screenshot 6](https://raw.githubusercontent.com/AyushiBambhroliya/SRMS-PHP-MySQL-Demo/102210a3b28b6de2aba5e4e84927c341e3176239/s6.png)
+
+
