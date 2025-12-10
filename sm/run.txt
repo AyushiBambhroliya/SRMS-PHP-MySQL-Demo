@@ -1,0 +1,1 @@
+start chrome "file:///C:/Users/Admin/Desktop/data ar/Data science/sm/public/index.html"

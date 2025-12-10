@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>View Results - Demo</title>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+<style>
+body { font-family: 'Poppins', sans-serif; background:#f0f6ff; padding:20px; }
+h2 { color:#0057ff; text-align:center; margin-bottom:20px; }
+table { width:90%; margin:20px auto; border-collapse: collapse; }
+th, td { border:1px solid #ddd; padding:12px; text-align:center; }
+th { background:#0057ff; color:white; }
+tr:nth-child(even){ background:#f2f2f2; }
+.bar { height:15px; background:#0057ff; border-radius:8px; display:inline-block; }
+.stats { max-width:600px; margin:20px auto; padding:15px; background:white; border-radius:12px; box-shadow:0 5px 15px rgba(0,0,0,0.1);}
+.stats p { margin:5px 0; font-weight:600; color:#0057ff; }
+</style>
+</head>
+<body>
+
+<h2>View Results </h2>
+
+<div class="stats" id="overallStats">
+    <h3>Class Summary</h3>
+    <p id="totalStudents"></p>
+    <p id="averageMarks"></p>
+    <p id="topScorer"></p>
+</div>
+
+<table id="resultsTable">
+    <tr>
+        <th>Roll No</th>
+        <th>Name</th>
+        <th>Subject</th>
+        <th>Marks</th>
+        <th>Visual</th>
+    </tr>
+</table>
+
+<script>
+// Demo data (same as Add Marks page)
+let marksData = [
+    {roll:101,name:'Ayushi',subject:'Python',marks:90},
+    {roll:101,name:'Ayushi',subject:'SQL',marks:85},
+    {roll:102,name:'Ansh',subject:'Python',marks:70},
+    {roll:103,name:'Raj',subject:'SQL',marks:75}
+];
+
+// Function to populate table
+function renderTable(){
+    const table = document.getElementById('resultsTable');
+    marksData.forEach(m=>{
+        const row = document.createElement('tr');
+        row.innerHTML = `
+            <td>${m.roll}</td>
+            <td>${m.name}</td>
+            <td>${m.subject}</td>
+            <td>${m.marks}</td>
+            <td><div class="bar" style="width:${m.marks}%"></div></td>
+        `;
+        table.appendChild(row);
+    });
+}
+
+// Function to calculate stats
+function renderStats(){
+    const totalStudents = new Set(marksData.map(m=>m.roll)).size;
+    const averageMarks = (marksData.reduce((a,b)=>a+b.marks,0)/marksData.length).toFixed(2);
+    const top = marksData.reduce((prev, curr)=> curr.marks > prev.marks ? curr : prev);
+
+    document.getElementById('totalStudents').innerText = `Total Students: ${totalStudents}`;
+    document.getElementById('averageMarks').innerText = `Average Marks: ${averageMarks}`;
+    document.getElementById('topScorer').innerText = `Top Scorer: ${top.name} (${top.subject}) - ${top.marks} marks`;
+}
+
+// Initialize
+renderTable();
+renderStats();
+</script>
+
+</body>
+</html>
+
